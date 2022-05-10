@@ -23,7 +23,6 @@ jobs:
                   path: main
             - name: Step two
               run: echo "::set-output name=date::$(date + '%Y-%,-%d')"
-
     job3:
         name: Third Job
         runs-on: macos-latest
@@ -34,7 +33,6 @@ jobs:
                 path: main
                 -name: Step two    
             run: echo "::set-output name=date::$(date + '%Y-%,-%d')"
-        
     job4:
         name: Fourth Job
         needs: [job1, job2, job3]
