@@ -28,10 +28,10 @@ jobs:
         runs-on: macos-latest
         steps:
             - name: Step one
-            uses: actions/checkout@v2
-            with:
-                path: main
-                - name: Step two    
+              uses: actions/checkout@v2
+              with:
+                  path: main
+              - name: Step two    
                 run: echo "::set-output name=date::$(date + '%Y-%,-%d')"
     job4:
         name: Fourth Job
@@ -39,8 +39,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
              - name: Step one
-             uses: actions/checkout@v2
-             with:
-                path: main
-                -name: Step two   
-                run: echo "::set-output name=date::$(date + '%Y-%,-%d')"    
+               uses: actions/checkout@v2
+               with:
+                   path: main
+               - name: Step two   
+                 run: echo "::set-output name=date::$(date + '%Y-%,-%d')"    
