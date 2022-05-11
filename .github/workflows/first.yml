@@ -15,13 +15,13 @@ jobs:
               uses: 1466587594/get-current-time@v2
               id: current-time
               with:
-                 format: MM-DD-YYYY
+                 format: MMMM Do YYYY
                  utcOffset: "+8:00"
             - name: Use Current date
               env:
-                Year: "${{ steps.current-time.ouputs.year }}"
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
+                Year: "${{ steps.current-time.ouputs.year }}"
               run: echo $Month $Day $Year               
     job2:
         name: Second Job
@@ -35,13 +35,13 @@ jobs:
               uses: 1466587594/get-current-time@v2
               id: current-time
               with:
-                 format: MM-DD-YYYY
+                 format: MMMM Do YYYY
                  utcOffset: "+8:00"
             - name: Use Current date
               env:
-                Year: "${{ steps.current-time.ouputs.year }}"
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
+                Year: "${{ steps.current-time.ouputs.year }}"
               run: echo $Month $Day $Year   
     job3:
         name: Third Job
@@ -55,13 +55,13 @@ jobs:
               uses: 1466587594/get-current-time@v2
               id: current-time
               with:
-                 format: MM-DD-YYYY
+                 format: MMMM Do YYYY
                  utcOffset: "+8:00"
             - name: Use Current date
               env:
-                Year: "${{ steps.current-time.ouputs.year }}"
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
+                Year: "${{ steps.current-time.ouputs.year }}"
               run: echo $Month $Day $Year 
     job4:
         name: Fourth Job
@@ -76,11 +76,11 @@ jobs:
                uses: 1466587594/get-current-time@v2
                id: current-time
                with:
-                 format: MM-DD-YYYY
+                 format: MMMM Do YYYY
                  utcOffset: "+8:00"
              - name: Use Current date
                env:
-                Year: "${{ steps.current-time.ouputs.year }}"
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
+                Year: "${{ steps.current-time.ouputs.year }}"
                run: echo $Month $Day $Year    
