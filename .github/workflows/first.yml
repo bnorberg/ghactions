@@ -21,7 +21,7 @@ jobs:
               env:
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
-                Year: "${{ steps.current-time.ouputs.year }}"
+                Year: "${{ steps.current-time.outputs.year }}"
               run: echo $Month $Day $Year               
     job2:
         name: Second Job
@@ -41,7 +41,7 @@ jobs:
               env:
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
-                Year: "${{ steps.current-time.ouputs.year }}"
+                Year: "${{ steps.current-time.outputs.year }}"
               run: echo $Month $Day $Year   
     job3:
         name: Third Job
@@ -61,7 +61,7 @@ jobs:
               env:
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
-                Year: "${{ steps.current-time.ouputs.year }}"
+                Year: "${{ steps.current-time.outputs.year }}"
               run: echo $Month $Day $Year 
     job4:
         name: Fourth Job
@@ -82,5 +82,5 @@ jobs:
                env:
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
-                Year: "${{ steps.current-time.ouputs.year }}"
+                Year: "${{ steps.current-time.outputs.year }}"
                run: echo $Month $Day $Year    
