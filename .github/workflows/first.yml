@@ -22,7 +22,7 @@ jobs:
                 Year: "${{ steps.current-time.ouputs.year }}"
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
-              run: echo "$Month $Day, $Year"               
+              run: echo $Month $Day $Year               
     job2:
         name: Second Job
         runs-on: windows-latest
@@ -42,7 +42,7 @@ jobs:
                 Year: "${{ steps.current-time.ouputs.year }}"
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
-              run: echo "$Month $Day, $Year"   
+              run: echo $Month $Day $Year   
     job3:
         name: Third Job
         runs-on: macos-latest
@@ -62,7 +62,7 @@ jobs:
                 Year: "${{ steps.current-time.ouputs.year }}"
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
-              run: echo "$Month $Day, $Year" 
+              run: echo $Month $Day $Year 
     job4:
         name: Fourth Job
         needs: [job1, job2, job3]
@@ -83,4 +83,4 @@ jobs:
                 Year: "${{ steps.current-time.ouputs.year }}"
                 Month: "${{ steps.current-time.outputs.month }}"
                 Day: "${{ steps.current-time.outputs.day }}"
-               run: echo "$Month $Day, $Year"    
+               run: echo $Month $Day $Year    
