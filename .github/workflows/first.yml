@@ -7,80 +7,24 @@ jobs:
         name: First Job
         runs-on: ubuntu-latest
         steps:
-            - name: Step one
-              uses: actions/checkout@v2
-              with:
-                  path: main
-            - name: Get current date
-              uses: 1466587594/get-current-time@v2
-              id: current-time
-              with:
-                 format: MMMM Do YYYY
-                 utcOffset: "+8:00"
-            - name: Use Current date
-              env:
-                Month: "${{ steps.current-time.outputs.month }}"
-                Day: "${{ steps.current-time.outputs.day }}"
-                Year: "${{ steps.current-time.outputs.year }}"
-              run: echo $Month $Day $Year               
+            - name: Print date
+            - run: date               
     job2:
         name: Second Job
         runs-on: windows-latest
         steps:
-            - name: Step one
-              uses: actions/checkout@v2
-              with:
-                  path: main
-            - name: Get current date
-              uses: 1466587594/get-current-time@v2
-              id: current-time
-              with:
-                 format: MMMM Do YYYY
-                 utcOffset: "+8:00"
-            - name: Use Current date
-              env:
-                Month: "${{ steps.current-time.outputs.month }}"
-                Day: "${{ steps.current-time.outputs.day }}"
-                Year: "${{ steps.current-time.outputs.year }}"
-              run: echo $Month $Day $Year   
+            - name: Print date
+            - run: date    
     job3:
         name: Third Job
         runs-on: macos-latest
         steps:
-            - name: Step one
-              uses: actions/checkout@v2
-              with:
-                  path: main
-            - name: Get current date
-              uses: 1466587594/get-current-time@v2
-              id: current-time
-              with:
-                 format: MMMM Do YYYY
-                 utcOffset: "+8:00"
-            - name: Use Current date
-              env:
-                Month: "${{ steps.current-time.outputs.month }}"
-                Day: "${{ steps.current-time.outputs.day }}"
-                Year: "${{ steps.current-time.outputs.year }}"
-              run: echo $Month $Day $Year 
+            - name: Print date
+            - run: date   
     job4:
         name: Fourth Job
         needs: [job1, job2, job3]
         runs-on: ubuntu-latest
         steps:
-             - name: Step one
-               uses: actions/checkout@v2
-               with:
-                   path: main
-             - name: Get current date
-               uses: 1466587594/get-current-time@v2
-               id: current-time
-               with:
-                 format: MMMM Do YYYY
-                 utcOffset: "+8:00"
-             - name: Use Current date
-               env:
-                Month: "${{ steps.current-time.outputs.month }}"
-                Day: "${{ steps.current-time.outputs.day }}"
-                Year: "${{ steps.current-time.outputs.year }}"
-               run: echo $Month $Day $Year    
+            - name: Print date
+            - run: date   
