@@ -3,28 +3,21 @@ name: first
 on: push
 
 jobs:
-    job1:
-        name: First Job
+    ubuntu:
         runs-on: ubuntu-latest
         steps:
-            - name: Print date
             - run: date               
-    job2:
-        name: Second Job
+    windows:
         runs-on: windows-latest
         steps:
-            - name: Print date
             - run: date    
-    job3:
-        name: Third Job
+    macos:
         runs-on: macos-latest
         steps:
             - name: Print date
             - run: date   
-    job4:
-        name: Fourth Job
-        needs: [job1, job2, job3]
+    ubuntu_depends:
+        needs: [ubuntu, windows, macos]
         runs-on: ubuntu-latest
         steps:
-            - name: Print date
             - run: date   
